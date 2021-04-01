@@ -1,0 +1,23 @@
+<script>
+    var a = 10; //숫자 -> 십
+    var b = '10'; //문자열 -> 일공 
+                    //''붙이는 순간 문자열, 숫자의 역할을 전혀 하지 못함
+
+    console.log(a);
+    console.log(b);
+
+    console.log(a + a); //숫자 더하기 -> 20
+    console.log(b + b); //문자열 합치기 -> 1010
+    console.log(a + b); //숫자+문자열 or 문자열+숫자 -> 문자열 합치기 -> 1010
+    console.log(a + a + b); //숫자+숫자 -> 20 + 문자열 -> 2010
+    console.log(a + b + a); //숫자+문자열 -> 1010(문자열) + 숫자 -> 101010
+    console.log(b + a + a); //문자열+숫자 -> 1010(문자열) + 숫자 -> 101010
+    console.log(b + (a + a)); //숫자+숫자 -> 숫자+문자열, 순서가 이렇게 바껴버린다. 그래서 20 + 문자열 -> 2010 이렇게 된다.
+
+    var c = parseInt(b); //숫자가 아닌 것을 만나기 전까지의 숫자를 반환
+    console.log(a + c);
+    console.log(parseInt('0000k'));
+    console.log(parseInt(123.334));
+    console.log(parseInt('4k59578'));
+
+</script>

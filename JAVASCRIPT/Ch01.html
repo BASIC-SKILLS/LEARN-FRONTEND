@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!--클라이언트가 입력한 값을 받는다.
+        type="text" 입력한 값 그대로 표시
+            "passowrd" 입력한 값이 보이지 않게 표시됨
+        value="안녕하세요" value의 값이 input칸에 적힌다.
+            사용자가 여기에 입력하는 값으로 업데이트된다.
+        자주 쓰이는 속성 : type, id, name, value, onclick
+    -->
+    <input type="text" id="txt">
+
+    <script>
+        //script를 제일 밑에 두는 이유는 화면이 다 만들어진 이후에 작동하면, 서비스 속도가 더 빨라지고,
+        //브라우저가 html을 읽으면 엘레멘트들의 객체가 만들어진다. (사용할 수 있도록 만들어준다. 실제로 화면에 찍어낸다. 설계도대로 자동차를 만든 것이다.)
+        //엘레멘트는 html코드의 객체를 가리킨다.
+
+        //html에서는 "", javascript에서는 '' - 그러나 ''를 표현하고 싶을 때는 ""로 감싼다 - 그러나 ""를 표현하고 싶을 때는 ''로 감싼다. - 또는 그냥 \' \" 이렇게 표현해도 된다.
+
+        //document는 브라우저가 html을 읽는 순간 document라는 객체를 무조건 만든다. 
+        //document와 console은 브라우저가 만드는 객체
+        //객체.메소드();
+        //id가 txt인 엘레멘트를 찾아갈 수 있는 주소값이 대입된다.
+        var txtElm = document.getElementById('txt');
+        console.log(txtElm.value); //id가 txt인 엘레멘트 자체가 출력된다.
+        txtElm.value = 'hello';
+
+        //id가 txt인 엘레멘트를 찾아갈 수 있는 주소값이 대입된다.
+        //결국 txtElm과 txtElm2는 같은 곳을 가르키고 있다. 같은값(X)
+        //txtElm과 txtElm1는 현진이 집 주소를 가지고 있다. 현진이의 집을 가지고 있는게 아니고  현진이의 집주소를 가지고 있어서, 호출하면 현진이의 집주소로 가서 현진이의 집을 사진찍어서 오는 것이다.
+            //var txtElm = document.getElementById('txt');
+            // var txtElm2 = document.getElementById('txt');
+        //위에서 현진이 집에있는 현진이를 가져왔다. -> 현진이가 온다.
+            //console.log(txtElm.value);
+        //그다음에 현진이의 머리를 단발로 바꿨다. -> 현진의 머리는 단발이 된다.
+            //txtElm.value = 'hello';
+        //다시 현진이의 집 주소로 가서 현진이를 데려온다 -> 단발머리가 된 현진이가 온다. 
+            //console.log(txtElm2.value);
+        var txtElm2 = document.getElementById('txt');
+        console.log(txtElm2.value);
+        console.log(txtElm.value);
+        
+    </script>
+
+</body>
+</html>

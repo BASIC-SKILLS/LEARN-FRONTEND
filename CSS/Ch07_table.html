@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        table {
+            width: 500px; /*50%라고 하면 화면크기가 바뀔 때마다 테이블크기도 변한다.*/
+        }
+        /*
+        .td1 { width: 110px; }
+        .td2 { width: 150px; }
+        */
+
+        /*first-child는 형제요소중 제일 첫 요소*/
+        /*
+        td:first-child { width: 50px; }
+        td:last-child { width: 100px; }
+        */
+        /*last-child는 형제요소중 제일 끝 요소*/
+
+        /*n번째 형제요소*/
+        /*{}안의 :와 선택자에서 :는 다른 의미이다. 선택자에서 :의 뜻은 좀 더 세분화하는 의미가 된다.*/
+        td:nth-child(2) { width: 50px; }
+        
+        tr:first-child { text-align: center; }
+        tr:last-child td:nth-child(2) { text-align: right; }
+        
+        table.cls1 { border: 1px solid black; }
+        table.cls1 tr:first-child { color:pink; }
+        table.cls2, table.cls2 td { border: 1px solid black; } /*중요*/
+        /*table.cls2, td { border: 1px solid black; } 이렇게 하면 table중 class명이 cls2인것과 모든 테이블의 td에 테두리가 생겨버린다.*/
+         
+        table.cls3 td:not(:nth-child(2)){
+            border: 1px solid black; 
+            border-collapse: collapse; /*테이블 만들 때 이 속성은 기본으로 주고 시작한다고 보면 된다.*/
+            background-color: aqua;} 
+    </style>
+
+</head>
+<body>
+    <table class="cls1">
+        <tr>
+            <td class="td1">FirstName</td>
+            <td class="td2">LastName</td>
+            <td class="td3">Savings</td>
+        </tr>
+
+        <tr>
+            <td>Peter</td>
+            <td>Griffin</td>
+            <td>1,000원</td>
+        </tr>
+
+        <tr>
+            <td>Lois</td>
+            <td>Griffin</td>
+            <td>2,000원</td>
+        </tr>
+
+        <tr>
+            <td>Joe</td>
+            <td>Griffin</td>
+            <td>3,000원</td>
+        </tr>
+
+        <tr>
+            <td>Joe</td>
+            <td>Swanson</td>
+            <td>3,000원</td>
+        </tr>
+    </table>
+    <br>
+    <table class="cls2">
+        <tr>
+            <td>FirstName</td>
+            <td>LastName</td>
+            <td>Savings</td>
+        </tr>
+
+        <tr>
+            <td>Peter</td>
+            <td>Griffin</td>
+            <td>1,000원</td>
+        </tr>
+
+        <tr>
+            <td>Lois</td>
+            <td>Griffin</td>
+            <td>2,000원</td>
+        </tr>
+
+        <tr>
+            <td>Joe</td>
+            <td>Griffin</td>
+            <td>3,000원</td>
+        </tr>
+
+        <tr>
+            <td>Joe</td>
+            <td>Swanson</td>
+            <td>3,000원</td>
+        </tr>
+    </table>
+    <br>
+    <table class="cls3">
+        <tr>
+            <td>FirstName</td>
+            <td>LastName</td>
+            <td>Savings</td>
+        </tr>
+
+        <tr>
+            <td>Peter</td>
+            <td>Griffin</td>
+            <td>1,000원</td>
+        </tr>
+
+        <tr>
+            <td>Lois</td>
+            <td>Griffin</td>
+            <td>2,000원</td>
+        </tr>
+
+        <tr>
+            <td>Joe</td>
+            <td>Griffin</td>
+            <td>3,000원</td>
+        </tr>
+
+        <tr>
+            <td>Joe</td>
+            <td>Swanson</td>
+            <td>3,000원</td>
+        </tr>
+    </table>
+</body>
+</html>

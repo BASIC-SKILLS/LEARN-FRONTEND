@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #parent {
+            display: flex;
+        }
+
+        #container {
+            flex-grow: 1;
+            background-color: pink;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-end;
+        }
+
+        #container2 {
+            display: flex;
+            flex-grow: 1;
+            background-color: blue;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+        }
+    </style>
+
+</head>
+<body>
+    Flex
+    <!--
+        Flex는 무조건 부모가 필요하다
+        부모역할 - 자식들 위치를 컨트롤 하겠다.
+            정방향, 크로스방향(세로)
+        #parent에게 자식은 container, container2 두 개 뿐.
+        #container
+        display가 flex일 떄만 의미가 있는 속성 flex-direction, justify-content
+        
+        Flex는 방향이 있다. column(위->아래, 수직) column-reverse(아래->위), row(왼->오, 가로), row-reverse(오->왼),
+            reverse가 되면 시작점도 반대가 된다.
+            
+        justify-content는 정방향을 컨트롤(위치조정)할 때 쓰는 것이다. flex-end(제일 끝으로 위치시킨다.) center(중앙), flex-start(시작점), space-around(컨텐트(글자) 기준으로 위아래 같은 비율로 띄어쓰기가 된다.)
+            space-between(양끝의 글자는 끝쪽에 붙고 중간글자들은 똑같은 빈칸을 가진다.) space-evenly(모든 글자 앞에 한칸씩 space가 온다.)
+        
+        align-items(가로방향을 위치조정한다.) flex-end, center, flex-start
+        
+            flex-grow는 부모의 영향을 비중으로 차지한다. 
+            #container -> flex-grow : 1      -> 부모의 영향을 1/3만큼 받겠다
+            #container2 -> flex-grow : 2     -> 부모의 영향을 2/3만큼 받겠다
+
+            #container -> flex-grow : 3  -> 부모의 영향을 3/8 
+            #container -> flex-grow : 5  -> 부모의 영향을 5/8
+    -->
+    
+    <div>안녕하세요</div> <!--기본값은 화면에 제일 위에 있겠지만, 언제든지 css에 의해서 위치가 변경될 수 있다. body안에서 태그의 위치는 중요하지 않다.-->
+
+    <!--
+        #parent는 #container과 #container2를 위치시킨다.
+        #parent { display:flex; }는 flex기본값으로  #container->#container2를 이렇게 왼->오 가로방향으로 위치시킨다.
+
+        #container {
+            flex-grow: 1;
+            background-color: pink;
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: flex-end;
+        }
+        부모의 영향으로 왼쪽에 위치한 상태에서
+        자식들 A, B, C, D의 위치를 바꾼다.
+        flex-direction으로 A,B,C,D를 위->아래, 수직으로 위치시킨다.
+        justify-content으로 A,B,C,D 글자 앞에 같은 비율로 space가 생긴다.
+        align-items로 제일 오른쪽으로 위치하게 된다. 
+
+         #container2 {
+            display: flex;
+            flex-grow: 1;
+            flex-direction: row;
+            justify-content: center;
+            align-items: flex-start;
+        }
+        부모의 영향으로 오른쪽에 위치한 상태에서
+        자식들 A, B, C, D의 위치를 바꾼다.
+        flex-direction으로 A,B,C,D를 왼->오, 가로로 위치시킨다.
+        justify-content으로 A,B,C,D를 중앙에 위치시킨다.
+        align-items: A,B,C,D가 시작점에 위치된다.
+    -->
+    
+<div id="parent">
+    <div id="container">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+    </div>
+
+    <div id="container2">
+        <div>A</div>
+        <div>B</div>
+        <div>C</div>
+        <div>D</div>
+    </div>
+</div>
+
+</body>
+</html>

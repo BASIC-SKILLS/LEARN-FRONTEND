@@ -1,0 +1,22 @@
+<script>
+    var a = 10;
+    var b = 12;
+    if (a > b) { // ()의 값이 참이면 {}실행, 거짓이면 쌩까고 다음으로 넘어간다.
+        console.log('a는 b보다 크다.'); 
+    }
+   
+    //상수 vs 리터럴
+    //상수 : 한 번 입력이 되면 바뀌지 않는 값 (변수의 반대 개념)
+    //리터럴 : 그 값 그 자체 (여기서의 리터럴 : 10, 12, 'a는 b보다 크다.', '끄읏!', 10, 7, 6)
+    const AA = 10; //const 상수 선언
+    AA = 7; //에러
+    var aaa = 6
+
+    if(10 > 11) {    //if-else if, if-else, if-else if-else -> 그룹화  //else가 있으면 무조건 하나는 실행이 된다.
+        console.log('10은 11보다 크다');
+    } else {
+        console.log('10은 11보다 크지 않다.');
+    }
+
+    console.log('끄읏!');
+</script>

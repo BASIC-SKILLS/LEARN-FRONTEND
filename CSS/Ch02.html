@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" type="text/css" href="Ch02.css"> 
+
+    <style>
+        h1 { color: orange; }
+        h1 {color: red;}
+    </style>
+
+</head>
+<body>
+    <h1 style="color: pink;">Hello</h1>
+    <!-- 순차적으로 내려오면서 네이비->오렌지->레드->핑크로 바뀌는 것이다 -->
+    
+    <h1>Hello</h1>
+
+    <!--부모에게 적용되는 css가 자식에게도 상속된다-->
+    <h1>
+        좋아요
+        <div>
+            <span>안녕</span>
+        </div>
+    </h1>
+</body>
+</html>

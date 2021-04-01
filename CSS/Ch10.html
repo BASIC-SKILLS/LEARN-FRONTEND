@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!--Ch10_1은 없다.-->
+    <style>
+        .cls1 {
+            position: static; /*기본값, 고정된다. left right bottom등이 먹히지 않는다. relative와 비슷하다.*/ /*부모역할 불가*/
+            background-color: red;
+            height: 300px;
+            width: 300px;
+            left: 20px; /*본인 기준에서 20px 왼쪽으로 떨어져라*/
+        }
+
+        .cls2 {
+            position: relative; /*static과 똑같이 만들어진다.*/
+            background-color: blue;
+            height: 300px;
+            width: 300px;
+        }
+
+        .cls3 {
+            position: relative; /*relative는 left right bottom등이 먹힌다.*/ /*부모역할*/ 
+            background-color: black;
+            height: 100px;
+            width: 300px;
+            left: 100px; /*본인 기준에서*/
+            top: 20px;
+        }
+
+        .c1 {
+            position: relative; 
+            background-color: aqua;
+            height: 300px;
+            width: 300px;
+            left: 100px; 
+        }
+
+        .c2 {
+            position: absolute; /*부모기준으로 움직인다*/ /*부모역할 가능*/
+            background-color: green;
+            height: 100px;
+            width: 100px;
+            right: 10px; /*부모기준*/ /*c1*/
+            bottom: 0px; /*부모기준*/
+        }
+
+        .d1 {
+            position: static; 
+            background-color: yellow;
+            height: 300px;
+            width: 300px;
+            left: 100px; 
+        }
+
+        .d2 { /*d1에 딱붙어서 생긴다.*/
+            position: absolute; 
+            background-color: green;
+            height: 100px;
+            width: 100px; 
+        }
+
+        .d3 {
+            position: absolute; 
+            background-color: green;
+            height: 100px;
+            width: 100px;
+            left: 10px; /*부모기준*/ /*body*/
+            top: 10px; /*부모기준*/ 
+        }
+
+        .d4 {
+            position: absolute; 
+            background-color: green;
+            height: 100px;
+            width: 100px;
+            right: 10px; /*부모기준*/  /*body*/
+            bottom: 10px; /*부모기준*/  /*전체화면이든 작은 화면이든 스크롤을 제일 올렸을 때 그 화면을 기준으로 bottom에서 10px떨어진다.*/
+        }
+    </style>
+
+</head>
+<body>
+    <div class="cls1"></div>
+    <div class="cls2"></div>
+    <div class="cls3"></div>
+
+    <div class="c1">
+        <div class="c2"></div>
+    </div>
+
+    <div class="d1">
+        <div class="d2"></div>
+        <div class="d3"></div>
+        <div class="d4"></div>
+    </div>
+</body>
+</html>

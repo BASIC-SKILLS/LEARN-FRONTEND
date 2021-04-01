@@ -1,0 +1,11 @@
+<script>
+    var a = 10;
+    var b = '2';
+
+    console.log(a * b); //다른 언어에서는 에러, javascript는 문자열 안에 숫자만 있다면 문자열을 숫자로 치환시켜 줘서 10*2 = 20으로 나온다.
+                        //+빼고 다른 연산자는 거의 다 이렇게 된다. 
+
+    var n1 = 5;
+    var n2 = '6a';
+    console.log(n1 - n2); //NaN -> Not a Number -> n2 문자열은 숫자로 이루어지지 않았기 때문에 에러
+</script>

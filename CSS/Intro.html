@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+        <!-- css
+            속성명 : 속성값;
+            .클래스명 {}
+            #아이디명 {}
+            태그명 {}
+            * {}  - 모든 태그
+            태크명.클래스명 {} - 태그 중에서도 같은 클래스 이름을 가진 것만
+            
+            <style></style> 태그 안에서 주석 /* */
+
+            class와 id의 차이점
+            class는 css에서 주로 쓰이고 id는 자바스크립트에서 주로 쓰인다.
+            class는 여러번 여러 곳에서 중복으로 쓰는 목적
+            id는 이름 중복없이 한 곳에서만 쓰는 목적
+
+            {} 안에 ; 꼭 넣는다.
+        -->
+    <style>
+        /* 클래스 선택자 */
+        .cls1 { 
+            color:blue;
+            font-size:20px;
+         }
+         /* 아이디 선택자 */
+         #id1 { font-weight: bold; }
+         /* 태그 선택자 - <a>태그 */
+         span { background-color: yellow; }
+    </style>
+</head>
+<body>
+    <div style="color: red; font-size: 20px;">안녕하세요</div>
+    <div class="cls1">안녕하세요</div>
+    <div id="id1">안녕하세요</div>
+    <span>안녕하세요</span>
+    <span class="cls1">안녕하세요</span>
+</body>
+</html>

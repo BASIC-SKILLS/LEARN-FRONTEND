@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.center{ /*div중에 클래스명이 center이면 css가 적용된다.*/
+            text-align: center;
+            color: red;
+        }
+        /*태그명 .클래스명 : 태그명 안에 몇 단계 안으로 들어가는 이 태그명 안이라면 css가 적용된다.*/
+        div .right { /*div중에 자식이 있으면 자식중에 class명이 right이면 css가 적용된다.*/
+            text-align: center;
+            color: blue;
+        }
+        div > .left { /*태그명 안에 직속 아래에 클래스명이 left인것, 태그명이 같아야한다*/
+            text-align: left;
+            color: pink;
+        }
+        div#pk { background-color: pink; }
+    </style>
+</head>
+<body>
+    <div class="center">첫번째</div>
+    <div id="pk">두번째</div>
+    <div>세번째
+        <p class="right">네번째</p>
+    </div>
+    <p class="right">다섯번째</p>
+    <div>
+        <section>
+            <div class="right">여섯번째</div>
+        </section>
+        <div class="left">여덟번째</div>
+    </div>
+</body>
+</html>
