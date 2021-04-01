@@ -1,0 +1,136 @@
+/*
+                                
+                      - section - h1
+                        (.hero)
+                                - article - p
+                                          - a
+      - div(.wrapper)
+                      -section      - ul  - li - figure  - img   
+                       (.breweries)                      - figcaption - h3
+                                               - p
+                                               - a
+                                          - li
+                                          - li
+                                          - li
+body 
+     - footer - p
+*/
+
+/*
+
+<rem> : 문서의 최상위 요소, 즉 html 요소의 크기의 몇 배인지로 크기를 정한다.
+<em> : 상위 요소 크기의 몇 배인지로 크기를 정한다.
+
+<auto-fit> : item으로 꽉 채운다.
+             행,열의 개수를 그리드 컨테이너 및 행/열의 크기에 맞게 자동으로 정한다.
+             autofit 으로 적으면 grid가 안 먹힌다.
+<align-items> : 그리드 item들을 수직으로(열 축)정렬
+              __________  
+              |        |
+              |□       |
+              |________|
+              |        |
+              |□       |
+              |________|
+              |        |
+              |□       |
+              |________|
+
+<font-weights> : 글자 굵기, 기본 값 :400
+
+<position> - relative : 자기자신을 기준으로 움직임, 보조역할
+           - absolute : 부모 기준으로 움직임
+
+<padding> : 기본값은 16px
+
+<font-size> : 기본값은 12pt, 16px, 100%
+
+*/
+
+
+
+
+html { scroll-behavior: smooth; }
+
+html, body { 
+  padding: 0; 
+  margin: 0; 
+  height: 100%;
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: 1fr auto;
+}
+
+footer {
+  width: 100%;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  text-align: center; 
+  font-size: .75rem; 
+  background-color: #333;
+  color: #fff;
+}
+
+a { 
+  text-decoration: none;
+  text-align: center;  
+  color: white;
+  background-color: goldenrod; 
+  border-radius: .25rem; 
+  display: inline-block; 
+  transition: all .3s;
+}
+
+a:hover { opacity: .6; }
+
+ul { padding: 0; margin: 0; list-style: none; }
+
+.wrapper { padding-bottom: 64px; }
+
+.hero { 
+  padding: 4rem 2rem; 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
+  align-items: center;
+}
+
+.hero>* { color: white; }
+
+.hero>h1 { font-size: 4rem; padding-bottom: 1rem; }
+
+.hero>article>p { font-size: 1.5rem; font-weight: 200; }
+
+.hero>article>a { padding: 1rem; margin-top: .75rem; }
+
+.breweries { padding: 2rem; }
+
+.breweries>ul { 
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+  gap: 1rem;
+}
+
+.breweries>ul>li { border: 1px solid #E2E2E2; border-radius: .5rem; }
+
+.breweries>ul>li>figure { 
+  max-height: 220px; 
+  overflow: hidden; 
+  border-top-left-radius: .5rem; 
+  border-top-right-radius: .5rem; 
+  position: relative;
+}
+
+.breweries>ul>li>figure>img { width: 100%; }
+
+.breweries>ul>li>figure>figcaption { 
+  position: absolute; 
+  bottom: 0;  
+  width: 100%;
+  background-color: rgba(0, 0, 0, .7);
+}
+
+.breweries>ul>li>figure>figcaption>h3 { color: white; padding: .75rem; font-size: 1.25rem; }
+
+.breweries>ul>li>p { font-size: 1rem; line-height: 1.5; padding: 1rem .75rem; color: #666666; }
+
+.breweries>ul>li>a { padding: .5rem 1rem; margin: .5rem; }

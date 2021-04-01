@@ -1,0 +1,51 @@
+html, body {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header, footer {
+    background-color: aqua;
+    flex-grow: 1;
+}
+
+.section {
+    flex-grow: 8;
+    display: flex;
+    flex-direction: row;
+}
+
+ul { list-style: none; }
+
+a { text-decoration: none; color: white;}
+a:visited { color: white; }
+a:hover { color: white; }
+a:active { color: white; }
+
+.menu {
+    background-color: blue;
+    flex-grow: 2;
+}
+
+.page {
+    background-color: yellow;
+    flex-grow: 8;
+}
+
+.subPage {
+    background-color: orange;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.subPage1 {
+    background-color: orange;
+    flex-grow: 1;
+}
+
+.subPage2 {
+    background-color: violet;
+    flex-grow: 1;
+}

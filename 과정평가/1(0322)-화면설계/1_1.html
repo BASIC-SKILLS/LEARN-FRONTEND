@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1_1</title>
+
+    <style>
+        * {
+            box-sizing: border-box; /*border 윤곽선의 크기 포함해서 정해진 width의 값에 맞추는 것, border의 윤곽선 크기가 아무리 굵어져도 정해진 width의 크기를 절대 넘어서지 않는다.*/
+        }
+
+        html, body { /*부모의 길이를 정하지 않으면 자식이 필요한 만큼만 늘어난다.*/ /*만약 자식이 height: 100%하면, 직속부모의 크기에서 100%를 쓰겠다. 자식은 절대 직속부모크기를 벗어나지 않는다.*/ /*body는 html(즉, 뷰포트, 디스플레이, 즉, 화면 그자체)의 100%를 다 쓰겠다는 뜻이다.*/
+            padding: 0px;    /*여기서부터*/
+            margin: 0px;
+            height: 100%;    /*여기까지 이렇게 하면 전체화면을 다 쓰는 것이다.*/
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        header {
+            top: 0px;
+            height: 120px;
+            background-color: #1abc9c;
+        }
+
+        footer {
+            bottom: 0px;
+            height: 100px;
+            background-color: #3498db;
+            display: flex;  /*자식 태그를 따로 안만들어도 된다.*/ /*텍스트도 자식*/
+            justify-content: center;
+            align-items: center;
+        }
+
+        .section {
+            flex-grow: 1; /*화면을 가득 채우게 처리하라 했으니, height값이 정해진 header, footer를 뺀 나머지를 전부 section이 사용하게 해야 한다. flex-grow는 사용하지 않는 남는 공간에서 비율만큼 가져가는 것이다. */
+            overflow-y: auto;
+        }
+
+        img {
+            float: right;
+        }
+
+        table, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+
+        .table {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+    </style>
+</head>
+<body>
+    <header>Exam1</header>
+
+    <section class="section">
+        <a href="https://www.google.com" target="_blank"><img src="exam1.jpg"></a>
+
+        <h3>What is Lorem Ipsum?</h3>
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+        
+        <h3>Why do we use it?</h3>
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+        <h3>Why do we use it?</h3>
+        It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+
+        <h3>Where can I get some?</h3>
+        There are many variations of passagesppppppppppppppppppppppppppppppppppppppppp of Loremlllllllllllllllllllllllllllllll Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the Internet. It uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic words etc.
+
+        <div class="table">
+           <table>
+               <tr>
+                   <td>Firstname</td>
+                   <td>Lastname</td>
+                   <td>Age</td>
+               </tr>
+               <tr>
+                   <td colspan="2">Jill Smith</td>
+                   <td>50</td>
+               </tr>
+               <tr>
+                   <td>Eve</td>
+                   <td>Jackson</td>
+                   <td rowspan="2">94</td>
+               </tr>
+               <tr>
+                   <td>Thomas</td>
+                   <td>Jackson</td>
+               </tr>
+           </table>
+        </div>
+    </section>
+
+    <footer>한국IT교육원</footer>
+</body>
+</html>
