@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var val_1 = "10";
+      var val_2 = 5;
+
+      // 문자열 더하기
+      console.log(val_1 + val_2);
+
+      // 더하기 제외하면 전부 숫자연산 처리
+      console.log("---");
+      console.log(val_1 * val_2);
+
+      //NaN : Not a Number
+      console.log("---");
+      console.log("10a" + val_2);
+      console.log("10a" * val_2);
+
+      // 문자열 -> 숫자
+      console.log("---");
+      console.log(parseInt(val_1) + val_2);
+      console.log(Number(val_1) + val_2);
+
+      // 숫자 -> 문자열
+      var val_3 = 7;
+      var val_4 = 9;
+      console.log("---");
+      console.log(val_3 + val_4);
+      console.log("" + val_3 + val_4);
+      console.log(String(val_3) + val_4);
+    </script>
+  </body>
+</html>

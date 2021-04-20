@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CH05</title>
+  </head>
+  <body>
+    <script>
+      // if(0) == false, 나머지는 모두 true
+      if (1) console.log("1은 true다.");
+
+      if (0) {
+        console.log("0은 true일까?");
+      } else {
+        console.log("0은 false다.");
+      }
+
+      if (-2) console.log("-2도 true이다.");
+
+      // 문자열 빈칸은 false,  나머지는 모두 true
+      if ("a") console.log("'a'도 true이다.");
+
+      //undefined는 값이 할당된 적이 없다.
+      //null은 주소값이 없다.
+      console.log("---");
+      var num;
+      console.log(num);
+
+      num = null;
+      console.log(num);
+
+      // undefined와 null은 false
+    </script>
+  </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CH09</title>
+  </head>
+  <body>
+    <script>
+      // 객체 -> var 변수명 = { 멤버필드 : 값, 멤버필드 : 값 } -> 제이슨
+      // 자바스크립트에서는 멤버필드 밖에 없다.
+      // 은닉화가 아주 어렵다.
+
+      var obj = {
+        name: "홍길동", // 멤버필드, name은 String값을 가리킨다.
+        age: 30, // 멤버필드, age는 int값을 가리킨다.
+        run: function () {
+          // 멤버필드, run은 함수를 가리킨다.
+          console.log("%s가 달린다.", this.name);
+        },
+      };
+      console.log(obj);
+      obj.run();
+
+      //멤버필드를 선언하지 않아도 밖에서 추가 가능
+      obj.height = 170;
+      console.log(obj);
+      console.log(obj.height);
+
+      obj.run = 10; // run은 더이상 함수가 아니다.
+      obj.name = "하니";
+      console.log(obj);
+      //obj.run(); // Uncaught TypeError: obj.run is not a function 에러가 뜬다.
+      console.log(obj.run);
+
+      // 함수선언 2가지 방법
+      console.log("---");
+      var sum1 = function (n1, n2) {
+        return n1 + n2;
+      };
+
+      function sum2(n1, n2) {
+        return n1 + n2;
+      }
+
+      console.log("sum1(10,20) : %d", sum1(10, 20));
+      console.log("sum2(1,20) : %d", sum2(1, 20));
+    </script>
+  </body>
+</html>

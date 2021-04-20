@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CH 12</title>
+  </head>
+  <body>
+    <script>
+      //map()
+
+      //map(여기 안에서 function을 만들어서 주로 사용)
+      //var result = arr.map(function(item) {});  <-같다->  var resultF = arr.map(myMap);
+
+      var arr = [10, 20, 30, 40];
+
+      var result = arr.map(function (item) {
+        return item * 2;
+      });
+
+      function myMap(item) {
+        return item - 2;
+      }
+
+      var resultF = arr.map(myMap);
+
+      console.log("result : " + result);
+      console.log("resultF : " + resultF);
+    </script>
+  </body>
+</html>

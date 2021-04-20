@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ch06</title>
+  </head>
+  <body>
+    <script>
+      // &&과 ||의 결과 값이 boolean이 아니라, 값이다.
+      // &&은 false가 나올 때까지 끝까지 물어본다. (하나라도 false이면 전체가 false이기 때문이다.)
+      // ||은 true가 나오면 바로 멈춘다. (하나라도 true이면 전체가 true이기 때문이다.)
+
+      var result = 10 && 12;
+      console.log(result);
+      var result = 10 && 12 && 17;
+      console.log(result);
+      var result = 10 && 0 && 17;
+      console.log(result);
+
+      console.log("---");
+      result = 10 || 12;
+      console.log(result);
+      result = 1 || 0 || 12;
+      console.log(result);
+      result = 0 || 12;
+      console.log(result);
+    </script>
+  </body>
+</html>

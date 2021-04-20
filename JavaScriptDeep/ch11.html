@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CH11</title>
+  </head>
+  <body>
+    <script>
+      // 콜백함수
+      // 자바스크립트가 배열을 만드는 원리
+      // forEach함수가 실행되는 원리
+
+      var arr = {
+        0: 10,
+        1: 20,
+        2: 30,
+        3: 40,
+        length: 4,
+        forEach: function (print) {
+          for (var i = 0; i < arr.length; i++) {
+            print(this[i]);
+          }
+        },
+      };
+
+      function print(item) {
+        console.log("item : " + item);
+      }
+      arr.forEach(print);
+    </script>
+  </body>
+</html>

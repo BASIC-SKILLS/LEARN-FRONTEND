@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CH10</title>
+  </head>
+  <body>
+    <script>
+      //배열 -> []
+
+      var array = [5, 4, 6, 2, 1];
+
+      //array의 배열이 length=3까지만 놔두고 나머지는 지워진다.
+      array.length = 3;
+      for (var i = 0; i < array.length; i++) {
+        console.log(array[i]);
+      }
+      console.log("length : " + array.length);
+
+      array[3] = 10;
+      console.log("length : " + array.length);
+      for (var i = 0; i < array.length; i++) {
+        console.log(array[i]);
+      }
+
+      console.log("---");
+      function print(item) {
+        console.log("array : " + item);
+      }
+      array.forEach(print); // 여기서 print()를 array.length만큼의 횟수로 호출되었다.
+      console.log("---");
+      var result = array.forEach(print);
+      console.log(result);
+    </script>
+  </body>
+</html>
