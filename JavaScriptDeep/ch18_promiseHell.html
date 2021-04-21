@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CH18</title>
+  </head>
+  <body>
+    <script>
+      function foo() {
+        return new Promise(function (resolve) {
+          setTimeout(function () {
+            console.log("뿌직- 와 - 정말 - 시.원.해. ^0^!!!");
+            resolve();
+          }, 3000);
+        });
+      }
+
+      function bar() {
+        return new Promise(function (resolve) {
+          setTimeout(function () {
+            console.log("시원하게 잘 해결하셨나요?^^ㅇ");
+            resolve();
+          }, 2000);
+        });
+      }
+
+      function baz() {
+        return new Promise(function (resolve) {
+          setTimeout(function () {
+            console.log("네. 몸이 정말 가벼워졌어요.");
+            resolve();
+          }, 1000);
+        });
+      }
+      /* 이거 왜 안돼?
+      foo().then(function () {
+        bar().then(function () {
+          baz().then(function () {});
+        });
+      });
+      */
+
+      foo()
+        .then(function () {
+          return bar();
+        })
+        .then(function () {
+          return baz();
+        })
+        .then(function () {});
+    </script>
+  </body>
+</html>

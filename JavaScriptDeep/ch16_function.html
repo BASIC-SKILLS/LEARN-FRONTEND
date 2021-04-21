@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CH16</title>
+  </head>
+  <body>
+    <script>
+      //이름만 똑같으면 같은 메소드
+
+      function sum(n1) {
+        if (n1 == undefined) {
+          n1 = 100;
+        }
+
+        console.log(n1 + n1);
+      }
+
+      sum();
+      sum(10, 30);
+
+      console.log("---");
+
+      //arguments
+      function sumAll() {
+        var sumAll = 0;
+        //인자값들이 arguments에 배열 형식으로 정리가 된다.
+        for (var i = 0; i < arguments.length; i++) {
+          sumAll += arguments[i];
+        }
+        console.log("arguments를 이용하여 구한 총 합 : " + sumAll);
+      }
+
+      sumAll(1);
+      sumAll(1 + 2);
+      sumAll(1 + 2 + 3);
+      sumAll(1 + 2 + 3 + 4);
+      sumAll(1 + 2 + 3 + 4 + 5);
+
+      // args - 추천
+      function sumAllR(...args) {
+        var sumAllR = 0;
+        for (var i = 0; i < args.length; i++) {
+          sumAllR += args[i];
+        }
+        console.log("args를 이용하여 구한 총 합 : " + sumAllR);
+      }
+
+      sumAllR(9);
+      sumAllR(9 + 8);
+      sumAllR(9 + 8 + 7);
+      sumAllR(9 + 8 + 7 + 6);
+      sumAllR(9 + 8 + 7 + 6 + 5);
+    </script>
+  </body>
+</html>

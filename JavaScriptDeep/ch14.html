@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CH14</title>
+  </head>
+  <body>
+    <script>
+      var arr = [1, 2, 3, 4, 5, 6, 7, 8];
+
+      var resultT = arr.filter(function (item) {
+        console.log("item : " + item);
+        return true; // true -> item을 배열에 담아준다. false -> 안 담아준다
+      });
+
+      console.log("---");
+
+      var resultF = arr.filter(function (item) {
+        console.log("item : " + item);
+        return false;
+      });
+
+      console.log("---");
+
+      console.log("arr : " + arr);
+      console.log("resultT : " + resultT);
+      console.log("resultF : " + resultF); // 빈 배열
+      console.log("resultF.length : " + resultF.length);
+
+      console.log("---");
+
+      var resultM = arr.filter(function (item) {
+        return item % 2; //0 빼고 다 트루
+      });
+
+      console.log("resultM : " + resultM);
+    </script>
+  </body>
+</html>

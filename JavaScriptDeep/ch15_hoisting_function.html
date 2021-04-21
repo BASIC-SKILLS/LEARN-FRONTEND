@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CH15</title>
+  </head>
+  <body>
+    <script>
+      // 호이스팅으로 인하여 function이 최상위로 실행된다.
+      sum(10, 20);
+
+      function sum(n1, n2) {
+        console.log(n1 + n2);
+      }
+
+      function sum(n1, n2, n3) {
+        console.log("더하기");
+      }
+
+      //결국 위의 코드는 아래의 코드로 바꿔지는 셈이다.
+
+      /*
+      function sum(n1, n2) {
+        console.log(n1 + n2);
+      }
+      
+      function sum(n1, n2, n3) {
+        console.log("더하기");
+      }
+
+      sum(10, 20);
+      */
+    </script>
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CH13</title>
+  </head>
+  <body>
+    <script>
+      // 배열 값 삽입, 삭제
+
+      var arr = [];
+
+      //뒤에서부터 추가
+      arr.push(10);
+      arr.push(20);
+      arr.push(30);
+      arr.push(40);
+      arr.push(50);
+      arr.push(60);
+      arr.push(70);
+      arr.push(80);
+      arr.push(90);
+      arr.push(100);
+
+      console.log("arr : " + arr);
+
+      //첫번째부터 삭제
+      arr.shift();
+      arr.shift();
+
+      console.log("arr : " + arr);
+
+      //앞에서부터 추가
+      arr.unshift(11);
+      arr.unshift(12);
+
+      console.log("arr : " + arr);
+
+      //뒤에서부터 삭제
+      arr.length = arr.length - 3;
+
+      console.log("arr : " + arr);
+
+      //자주 쓰인다.
+      //중간 값 삭제 후 리턴, n번 방의 것을 n개 지우고, 지운 것을 return
+      var delVal = arr.splice(2, 1);
+      console.log("arr : " + arr);
+      console.log("delVal : " + delVal);
+
+      var delVal = arr.splice(2, 2);
+      console.log("arr : " + arr);
+      console.log("delVal : " + delVal);
+    </script>
+  </body>
+</html>
